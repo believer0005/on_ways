@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>image grid gallery with nice hover effect</title>
+  </head>
+  <body>
+
+    <!---- section start ---->
+
+    <div class="grid imggrid">
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/1.png" alt="1.png" class="tileimg tileimg1">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/2.png" alt="1.png" class="tileimg tileimg2">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/3.png" alt="1.png" class="tileimg tileimg3">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/4.png" alt="1.png" class="tileimg tileimg4">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/5.png" alt="1.png" class="tileimg tileimg5">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/6.png" alt="1.png" class="tileimg tileimg6">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/7.png" alt="1.png" class="tileimg tileimg7">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/8.png" alt="1.png" class="tileimg tileimg8">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/9.png" alt="1.png" class="tileimg tileimg9">
+          </a>
+        </div>
+      </div>
+
+      <div class="gridblock">
+        <div class="tile">
+          <a href="#" class="tilelink">
+            <img src="./img/10.png" alt="1.png" class="tileimg tileimg10">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const showImage = document.createElement('div');
+      showImage.classList.add('showImage');
+      document.body.appendChild(showImage);
+
+      const body = document.body;
+      const image = document.querySelectorAll('img');
+
+      body.addEventListener('click', e => {
+        const image = e.target.closest('img');
+        if(!image) return;
+
+        showImage.classList.add('active');
+        const img = new Image();
+        img.src = image.src;
+        showImage.innerHTML = '';
+        showImage.appendChild(img);
+      })
+
+      body.addEventListener('click', e=>{
+        if(e.target !== e.currentTarget) return;
+        showImage.classList.remove('active');
+      })
+    </script>
+   
+  </body>
+</html>

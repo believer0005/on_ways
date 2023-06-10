@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: #18222d;
+}
+
+.grid{
+    width: 100%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gridblock{
+    width: 50%;
+    min-height: 11.25rem;
+    padding: 1rem;
+}
+
+.imggrid{
+    transform: rotateX(45deg) rotateZ(45deg);
+    perspective: 1000px;
+}
+
+.imggrid .tilelink:hover .tileimg{
+    top: -1rem;
+    left: -1rem;
+}
+
+.imggrid .tileimg{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    transition-property: opacity , top, left, box-shadow;
+}
+
+.tilelink{
+    display: block;
+}
+
+.tilelink:hover .tileimg{
+    opacity: 1;
+}
+
+.tileimg{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-in;
+}
+
+.tilelink:hover .tileimg1{
+    box-shadow:5px 5px #f4aac866,10px 10px #f4aac866,15px 15px #f4aac866,20px 20px #f4aac866,25px 25px #f4aac866;
+}
+
+.tilelink:hover .tileimg2{
+    box-shadow:5px 5px #2dbae90d,10px 10px #2dbae90d,15px 15px #2dbae90d,20px 20px #2dbae90d,25px 25px #2dbae90d;
+}
+
+.tilelink:hover .tileimg3{
+    box-shadow:5px 5px #d6ddf44d,10px 10px #d6ddf44d,15px 15px #d6ddf44d,20px 20px #d6ddf44d,25px 25px #d6ddf44d;
+}
+
+.tilelink:hover .tileimg4{
+    box-shadow:5px 5px #5277c066,10px 10px #5277c066,15px 15px #5277c066,20px 20px #5277c066,25px 25px #5277c066;
+}
+
+.tilelink:hover .tileimg5{
+    box-shadow:5px 5px #8adaf566,10px 10px #8adaf566,15px 15px #8adaf566,20px 20px #8adaf566,25px 25px #8adaf566;
+}
+
+.tilelink:hover .tileimg6{
+    box-shadow:5px 5px #cbd7c166,10px 10px #cbd7c166,15px 15px #cbd7c166,20px 20px #cbd7c166,25px 25px #cbd7c166;
+}
+
+.tilelink:hover .tileimg7{
+    box-shadow:5px 5px #5bdafa66,10px 10px #5bdafa66,15px 15px #5bdafa66,20px 20px #5bdafa66,25px 25px #5bdafa66;
+}
+
+.tilelink:hover .tileimg8{
+    box-shadow:5px 5px #919cc466,10px 10px #919cc466,15px 15px #919cc466,20px 20px #919cc466,25px 25px #919cc466;
+}
+
+.tilelink:hover .tileimg9{
+    box-shadow:5px 5px #bc618166,10px 10px #bc618166,15px 15px #bc618166,20px 20px #bc618166,25px 25px #bc618166;
+}
+
+.tilelink:hover .tileimg10{
+    box-shadow:5px 5px #048ce766,10px 10px #048ce766,15px 15px #048ce766,20px 20px #048ce766,25px 25px #048ce766;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.showImage{
+    --img-max: clamp(30rem, calc(-5rem + 66.67vw),35rem);
+    --img-min: clamp(25rem, calc(3.33rem + 66.67vw),30rem);
+
+    --img-threshold: calc(19rem + 26.67vw);
+
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 20px;
+    background: #0005;
+    display: none;
+}
+
+.showImage > img{
+    width: clamp(var(--img-min),var(--img-threshold),var(--img-max));
+    object-fit: cover;
+    outline: 2px solid #fff;
+    outline-offset: -8px;
+}
+
+.showImage.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------  section start  -----*/

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="click-me">
+        <button class="btn light">Light</button>
+        <button class="btn dark">Dark</button>
+    </div>
+    
+
+    <style>
+        .click-me{
+            width:200px ;
+            height: 50px;
+            margin: 0 auto;
+            margin-top: 300px;
+            display: flex;
+
+        }
+
+        .light{
+            width: 50%;
+            height: 100%;
+            background: white;
+            border: 3px solid black;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            cursor: pointer;
+        }
+        .dark{
+            width: 50%;
+            height: 100%;
+            background: black;
+            color: #fff;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 3px solid black;
+            cursor: pointer;
+            
+        }
+    </style>
+
+    <script>
+       let btns = document.getElementsByClassName("btn");
+
+    for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        let buttonStyle = getComputedStyle(this);
+        let buttonBgColor = buttonStyle.backgroundColor;
+        document.body.style.backgroundColor = buttonBgColor;
+    });
+    }
+
+    </script>
+
+</body>
+</html>

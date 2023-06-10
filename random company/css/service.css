@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/********** nav section start *******/
+
+.nav{
+    width: 100%;
+    height: 100px;
+    padding: 10px 0 0 0;
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+    padding: 15px;
+}
+
+.logo h1{
+    color: skyblue;
+    letter-spacing: 3px ;
+}
+
+.logo h2{
+    color: blue;
+    letter-spacing: 3px ;
+}
+
+.tab{
+    float: right;
+    padding: 20px;
+}
+
+.tab a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 25px;
+    color: #000;
+}
+
+.tab a:hover{
+    color: skyblue;
+}
+
+/********** nav section end *******/
+
+/********** content section start *******/
+
+.content-one{
+    width: 100%;
+    height: 100vh;
+}
+
+.content-image{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/pexels-oleksandr-pidvalnyi-1227513.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/********** content section end *******/
+
+/********* service content start ********/
+
+.service-box{
+    width: 100%;
+    height: 150vh;
+    flex-direction: column;
+}
+
+.package-one{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.packet-one{
+    width: 40%;
+    height: 400px;
+}
+
+.packet-one .packet-image{
+    width: 100%;
+    height: 70%;
+    background-image: url("../images/satellite-image-of-globe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.packet-text{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    padding: 15px 0 0 0;
+}
+
+.packet-two{
+    width: 40%;
+    height: 400px;
+}
+
+.packet-two .packet-image{
+    width: 100%;
+    height: 70%;
+    background-image: url("../images/tree-736885__340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.package-two{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/********* service content end ********/
+
+/********** product section start *******/
+
+.product{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color:#ffff;
+    background-image: url("../images/istockphoto-1333345659-612x612.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-rap{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-one{
+    width: 30%;
+    height: 80%;
+    background-image: url("../images/tree-736885__340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-two{
+    width: 30%;
+    height: 80%;
+    background-image: url("../images/tree-736885__340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-three{
+    width: 30%;
+    height: 80%;
+    background-image: url("../images/tree-736885__340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/********** product section end *******/
+
+/********** contact section start *******/
+
+.contact{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0 0 0 ;
+}
+
+.contact-text{
+    width: 60%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+.contact-rap{
+    width: 30%;
+    height: 100%;
+    font-size: 1.7rem;
+    padding: 40px;
+    color: skyblue;
+}
+
+.contact-rap h4{
+    font-size: 20px;
+    color: #000;
+}
+
+.contact-rap img{
+    width:20px;
+}
+
+/********** contact section end *******/
+
+/*********** footer section start*************/
+
+footer{
+    width: 100%;
+    height: 50px;
+    background: #272525;
+    color: #fff;
+}
+
+/*********** footer section end*************/

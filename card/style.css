@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.card{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.box-one{
+    width: 200px;
+    height: 300px;
+    background: green;
+    margin-right:-100px ;
+}
+
+.box-two{
+    width: 500px;
+    height: 200px;
+    background: white;
+    border-radius: 50px;
+    z-index: 100;
+}
+
+.box-three{
+    width: 200px;
+    height: 300px;
+    background: green;
+    margin-left:-100px ;
+}

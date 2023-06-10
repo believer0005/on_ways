@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click_element_chnage_BG_color</title>
+</head>
+<body>
+
+    <button class="btn btn-1" ></button>
+    <button class="btn btn-2" ></button>
+    <button class="btn btn-3" ></button>
+    <button class="btn btn-4" ></button>
+    <button class="btn btn-5" ></button>
+    <button class="btn btn-6" ></button>
+    <button class="btn btn-7" ></button>
+    <button class="btn btn-8" ></button>
+    <button class="btn btn-9" ></button>
+    <button class="btn btn-10" ></button>
+
+    <style>
+        .btn {
+            padding: 30px 53px;
+            margin-bottom: 2px;
+            background: var(--color);
+            cursor: pointer;
+        }
+
+        .btn-1 {--color:red}
+        .btn-2 {--color:blue}
+        .btn-3 {--color:green}
+        .btn-4 {--color:yellow}
+        .btn-5 {--color:pink}
+        .btn-6 {--color:skyblue}
+        .btn-7 {--color:gray}
+        .btn-8 {--color:darkgreen}
+        .btn-9 {--color:darkred}
+        .btn-10 {--color:yellow}
+    </style>
+
+    <script>
+        let btns = document.getElementsByClassName("btn");
+
+        for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            let buttonStyle = getComputedStyle(this);
+            let buttonBgColor = buttonStyle.backgroundColor;
+            document.body.style.backgroundColor = buttonBgColor;
+        });
+}
+    </script>
+    
+</body>
+</html>
