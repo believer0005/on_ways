@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects Portfolio</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-image {
+        width: 100%;
+        display: block;
+        height: 0;
+        padding-bottom: 66.66%;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .card-image:not([style*="background-image"]) {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-title {
+        font-size: 1.4em;
+        margin: 15px 15px 10px;
+        color: #0056b3;
+      }
+
+      .card-description {
+        font-size: 0.95em;
+        margin: 0 15px 15px;
+        color: #666;
+        flex-grow: 1;
+      }
+
+      .card-button {
+        display: block;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 12px 15px;
+        text-decoration: none;
+        border-radius: 0 0 8px 8px;
+        transition: background-color 0.3s ease;
+        margin-top: auto;
+      }
+
+      .card-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-grid" id="cardContainer"></div>
+
+    <script>
+      const cardData = [
+        {
+          imageSrc: "./Card hover image/Screenshot.png",
+          title: "Card hover image",
+          description: "A project demonstrating card hover effects.",
+          link: "./Card hover image/index.html",
+        },
+        {
+          imageSrc: "./Create Responsive Admin Dashboard/Screenshot.png",
+          title: "Create Responsive Admin Dashboard",
+          description: "A responsive admin dashboard project.",
+          link: "./Create Responsive Admin Dashboard/index.html",
+        },
+        {
+          imageSrc: "./Dark Mode only CSS/Screenshot.png",
+          title: "Dark Mode only CSS",
+          description: "A project showcasing dark mode using only CSS.",
+          link: "./Dark Mode only CSS/index.html",
+        },
+        {
+          imageSrc: "./FriendBook/Screenshot.png",
+          title: "FriendBook",
+          description: "A social media-like project named FriendBook.",
+          link: "./FriendBook/index.html",
+        },
+        {
+          imageSrc: "./Light Bulb On and Off Toggle Switch/Screenshot.png",
+          title: "Light Bulb On and Off Toggle Switch",
+          description: "A toggle switch project for a light bulb effect.",
+          link: "./Light Bulb On and Off Toggle Switch/index.html",
+        },
+        {
+          imageSrc: "./Marvel fan page/Screenshot.png",
+          title: "Marvel fan page",
+          description: "A fan page dedicated to Marvel.",
+          link: "./Marvel fan page/index.html",
+        },
+        {
+          imageSrc: "./Menjs by Caleb Miller/Screenshot.png",
+          title: "Menjs by Caleb Miller",
+          description: "A project named Menjs, created by Caleb Miller.",
+          link: "./Menjs by Caleb Miller/index.html",
+        },
+        {
+          imageSrc: "./Mobile Shapes E-Commerce Website/Screenshot.png",
+          title: "Mobile Shapes E-Commerce Website",
+          description: "An e-commerce website project with mobile shapes.",
+          link: "./Mobile Shapes E-Commerce Website/index.html",
+        },
+        {
+          imageSrc: "./Medem Computer/Screenshot.png",
+          title: "Medem Computer",
+          description: "A project related to Medem Computer.",
+          link: "./Medem Computer/index.html",
+        },
+        {
+          imageSrc:
+            "./Opacity in CSS CSS Transparent Background C.../Screenshot.png",
+          title: "Opacity in CSS",
+          description:
+            "A project demonstrating opacity and transparent backgrounds in CSS.",
+          link: "./Opacity in CSS CSS Transparent Background C.../index.html",
+        },
+        {
+          imageSrc: "./Personal Portfolio Website/Screenshot.png",
+          title: "Personal Portfolio Website",
+          description: "A personal portfolio website project.",
+          link: "./Personal Portfolio Website/index.html",
+        },
+        {
+          imageSrc: "./Responsive Admin Dashboard/Screenshot.png",
+          title: "Responsive Admin Dashboard",
+          description: "Another responsive admin dashboard project.",
+          link: "./Responsive Admin Dashboard/index.html",
+        },
+        {
+          imageSrc: "./To-Do List/Screenshot.png",
+          title: "To-Do List",
+          description: "A to-do list application project.",
+          link: "./To-Do List/index.html",
+        },
+        {
+          imageSrc: "./Variant of Buttons/Screenshot.png",
+          title: "Variant of Buttons",
+          description: "A project showcasing different button styles.",
+          link: "./Variant of Buttons/index.html",
+        },
+        {
+          imageSrc: "./card/Screenshot.png",
+          title: "card",
+          description: "A project focused on card designs.",
+          link: "./card/index.html",
+        },
+        {
+          imageSrc: "./div shape/Screenshot.png",
+          title: "div shape",
+          description: "A project experimenting with div shapes.",
+          link: "./div shape/index.html",
+        },
+        {
+          imageSrc: "./image gallery project/Screenshot.png",
+          title: "image gallery project",
+          description: "An image gallery project.",
+          link: "./image gallery project/index.html",
+        },
+        {
+          imageSrc: "./impact/Screenshot.png",
+          title: "impact",
+          description: "A project named Impact.",
+          link: "./impact/index.html",
+        },
+        {
+          imageSrc: "./loading animatio/Screenshot.png",
+          title: "loading animation",
+          description: "A project showcasing loading animations.",
+          link: "./loading animatio/index.html",
+        },
+        {
+          imageSrc: "./raw/Screenshot.png",
+          title: "raw",
+          description: "A project named Raw.",
+          link: "./raw/index.html",
+        },
+        {
+          imageSrc: "./random company/Screenshot.png",
+          title: "random company",
+          description: "A project for a random company.",
+          link: "./random company/index.html",
+        },
+        {
+          imageSrc: "./study project/Screenshot.png",
+          title: "study project",
+          description: "A study or experimental project.",
+          link: "./study project/index.html",
+        },
+        {
+          imageSrc: "./we are creative/Screenshot.png",
+          title: "we are creative",
+          description: "A creative-themed project.",
+          link: "./we are creative/index.html",
+        },
+      ];
+
+      const cardContainer = document.getElementById("cardContainer");
+
+      function createCard(data) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("card-image");
+        imgContainer.style.backgroundImage = `url('${data.imageSrc}')`;
+
+        const title = document.createElement("h3");
+        title.classList.add("card-title");
+        title.textContent = data.title;
+
+        const description = document.createElement("p");
+        description.classList.add("card-description");
+        description.textContent = data.description;
+
+        const button = document.createElement("a");
+        button.href = data.link;
+        button.classList.add("card-button");
+        button.textContent = "Show Project";
+        button.target = "_blank";
+        button.rel = "noopener noreferrer";
+
+        card.appendChild(imgContainer);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(button);
+
+        return card;
+      }
+
+      cardData.forEach((data) => {
+        const newCard = createCard(data);
+        cardContainer.appendChild(newCard);
+      });
+    </script>
+  </body>
+</html>
